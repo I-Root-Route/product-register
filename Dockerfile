@@ -8,6 +8,5 @@ RUN apt update && apt install -y \
 
 WORKDIR /product-register
 COPY Gemfile Gemfile.lock /product-register/
-RUN bundle lock --add-platform x86_64-linux && \
-    gem install bundler -v '2.2.17' && \ 
+RUN gem install bundler -v '2.2.17' && \ 
     bundle install
